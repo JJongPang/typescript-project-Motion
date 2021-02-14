@@ -1,0 +1,73 @@
+@import 'reset.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: url('../assets/ts-bg.png');
+    background-size: cover;
+}
+
+/* header */
+.motion-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #00000090;
+}
+
+.motion-title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+
+.motion-menu {
+    display: flex;
+}
+
+.motion-item {
+    margin-right: 10px;
+}
+
+.item-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+/* footer */
+.motion-footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #00000090;
+}
+
+.motion-copyright {
+    color: white;
+}
+
+/* Modal */
+.url-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-column:first-child {
+    margin-bottom: 10px;
+}
+
+.input-label {
+    display: block;
+    color: white;
+}

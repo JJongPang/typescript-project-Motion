@@ -2,18 +2,20 @@ import { Componet } from './../components';
 import { BaseComponent } from "../components.js";
 
 export interface Composable {
-    addChild(child: Componet): void;
+   addChild(child: Componet): void;
 }
 
 class PageItemComponent extends BaseComponent<HTMLElement> implements Composable {
     constructor() {
-        super(`
-        <li class="page-item">
-            <section class="page-item__body"></section>
-            <div class="page-item__controls">
-                <button class="close">&times;</button>
-            </div>
-        </li>`)
+        super(
+            `<li class="page-item">
+                <section class="page-item__body">
+                    <div class="page-item__controls">
+                        <span class="close"> &times; </span>
+                    </div>
+                </section>
+            </li>`
+        )
     }
 
     addChild(child: Componet) {
@@ -24,7 +26,7 @@ class PageItemComponent extends BaseComponent<HTMLElement> implements Composable
 
 export class PageComponet extends BaseComponent<HTMLUListElement> implements Composable {
     constructor() {
-        super('<ul class="page"></ul>');
+        super('<ul class="page">/ul>');
     }
 
     addChild(section: Componet) {

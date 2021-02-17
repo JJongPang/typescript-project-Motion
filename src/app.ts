@@ -6,23 +6,24 @@ import { Composable, PageComponet } from './component/page/page.js';
 import { TodoComponent } from './component/page/item/todo.js';
 
 class App {
-    private readonly page: PageComponet & Composable;
+    private readonly page: Componet & Composable;
 
     constructor(appRoot: HTMLElement) {
         this.page = new PageComponet();
         this.page.attachTo(appRoot);
        
         const image = new ImageComponent('Image Title', 'https://picsum.photos/600/300');
-        image.attachTo(appRoot, 'beforeend');
+        this.page.addChild(image);
 
-        const video = new VideoComponent('Video Title', "https://www.youtube.com/embed/fBw5iwzu7hI");
-        video.attachTo(appRoot, 'beforeend');
+        const video = new VideoComponent('Video Title', "https://www.youtube.com/watch?v=T2MkuMdzAuw");
+        this.page.addChild(video);
 
         const note = new NoteComponent('Note Title', 'Note Body');
-        note.attachTo(appRoot, 'beforeend');
+        this.page.addChild(note);
 
         const todo = new TodoComponent('Todo Title', 'Todo Item');
-        todo.attachTo(appRoot, 'beforeend');
+        this.page.addChild(todo);
+
     }
 }
 

@@ -1,3 +1,4 @@
+import { PageComponet } from './page/page';
 export interface Componet {
     attachTo(parent: HTMLElement, position?: InsertPosition): void;
     removeFrom(parent: HTMLElement): void;
@@ -22,5 +23,14 @@ export class BaseComponent<T extends HTMLElement> implements Componet {
             throw new Error('Check Parent mismatch!');
         }
         parent.removeChild(this.element);
+    }
+
+    checkChild(parent: HTMLElement) {
+        if(parent !== this.element.parentElement) {
+            throw new Error('Check Parent Mismatch!');
+        }
+        parent !== this.element.parentElement {
+            throw new Error('check parent');
+        }
     }
 }

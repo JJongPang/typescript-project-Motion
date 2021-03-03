@@ -8,13 +8,12 @@ export class TextSectionInput extends BaseComponent<HTMLElement> {
                 <div class="form__container">
                     <label for="title">Title</label>
                     <input type="text" id="title" />
-                </div> 
-                <div class="form__container">
-                    <label for="url">URL</label>
-                    <textare type = "text" row="3" id="body"></textare>
                 </div>
-            </div>
-            `
+                <div class="form__container">
+                    <label for="body">Body</label>
+                    <textarea type="text" row="3" id="body"></textarea>
+                </div>
+            </div>`
         );
     }
 
